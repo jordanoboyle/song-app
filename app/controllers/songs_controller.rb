@@ -11,7 +11,8 @@ class SongsController < ApplicationController
   end
 
   def index
-    render json: {mess: "hello there"}
+    @songs = Song.all 
+    render template: "songs/index"
   end
   
   def show

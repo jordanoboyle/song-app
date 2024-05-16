@@ -10,4 +10,12 @@ class SongsController < ApplicationController
     render template: "songs/show"
   end
 
+  def index
+    render json: {mess: "hello there"}
+  end
+  
+  def show
+    render json: {mess: "hello there"}
+    
+  end
 end

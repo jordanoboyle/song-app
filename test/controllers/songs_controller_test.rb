@@ -36,4 +36,5 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal "Updated name", data["title"]
   end
+  
 end

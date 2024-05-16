@@ -29,5 +29,9 @@ class SongsController < ApplicationController
     render template: "songs/show"
   end
 
-  
+  def destroy
+    @song = Song.find_by(id: 6)
+    @song.destroy
+    render template: "songs/show"
+  end
 end

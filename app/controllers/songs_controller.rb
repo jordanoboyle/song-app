@@ -21,12 +21,12 @@ class SongsController < ApplicationController
   end
 
   def update
-    @song = Song.find_by(id: 4)
-    @song.title = "Yellow Sub"
-    @song.artist = "Beatles"
-    @song.length = 4
+    @song = Song.find_by(id: params[:id])
+    @song.title = params[:title]  || @song.title
+    @song.artist = params[:artist]  || @song.artist
+    @song.length = params[:length]  || @song.length
     @song.save
-
+    
     render template: "songs/show"
   end
 end

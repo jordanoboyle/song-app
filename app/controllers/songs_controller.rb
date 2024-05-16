@@ -25,8 +25,9 @@ class SongsController < ApplicationController
     @song.title = params[:title]  || @song.title
     @song.artist = params[:artist]  || @song.artist
     @song.length = params[:length]  || @song.length
-    @song.save
-    
+    @song.save   
     render template: "songs/show"
   end
+
+  
 end

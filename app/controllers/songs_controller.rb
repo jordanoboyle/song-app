@@ -30,7 +30,7 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    @song = Song.find_by(id: 6)
+    @song = Song.find_by(id: params[:id])
     @song.destroy
     render template: "songs/show"
   end

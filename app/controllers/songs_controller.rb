@@ -21,6 +21,12 @@ class SongsController < ApplicationController
   end
 
   def update
-    render json: {mess: "hello there"}
+    @song = Song.find_by(id: 4)
+    @song.title = "Yellow Sub"
+    @song.artist = "Beatles"
+    @song.length = 4
+    @song.save
+
+    render template: "songs/show"
   end
 end

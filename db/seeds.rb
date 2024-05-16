@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+
+# Song.create(title: "In The End", artist: "linkin park", length: 4)
+# Song.create(title: "Easy", artist: "Eagles", length: 5)
+# Song.create(title: "All The Small Things", artist: "Blink-182", length: 3)

@@ -1,3 +1,9 @@
 class SongsController < ApplicationController
-  protect_from_forgery with: :exception, unless: -> { request.format.json? }
+  
+  def create
+    @song = Song.new(title: "American Idiot", artist: "Green Day", length: 4)
+    @song.save
+    render template: "songs/show"
+  end
+
 end

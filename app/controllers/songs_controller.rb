@@ -16,7 +16,7 @@ class SongsController < ApplicationController
   end
   
   def show
-    render json: {mess: "hello there"}
-    
+    @song = Song.find_by(id: params[:id])
+    render template: "songs/show"
   end
 end
